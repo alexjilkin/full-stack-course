@@ -1,5 +1,8 @@
-export const Content = ({items}) => (items.map((item) => (
-    <p key={item.part}>
-        {item.part} {item.exercise}
-    </p>
-)))
+export const Content = ({ parts }) =>
+    parts.map((part) => <Part key={part.name} part={part} />);
+
+const Part = ({ part }) => (
+  <p>
+    {part.name} {part.exercises}
+  </p>
+);

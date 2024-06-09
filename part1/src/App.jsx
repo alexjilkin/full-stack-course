@@ -3,17 +3,17 @@ import { Content } from "./Content";
 import {Total} from "./Total"
 
 const course = "Half Stack application development";
-const items = [
-  { part: "Fundamentals of React", exercise: 10 },
-  { part: "Using props to pass data", exercise: 7 },
-  { part: "State of a component", exercise: 14 },
+const parts = [
+  { name: "Fundamentals of React", exercises: 10 },
+  { name: "Using props to pass data", exercises: 7 },
+  { name: "State of a component", exercises: 14 },
 ];
 const App = () => {
   return (
     <div>
       <Header course={course} />
-      <Content items={items} />
-      <Total total={items.reduce((acc, item) => acc + item.exercise, 0)} />
+      <Content parts={parts} />
+      <Total parts={parts} />
     </div>
   );
 };
